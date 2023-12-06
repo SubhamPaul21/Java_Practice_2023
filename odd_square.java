@@ -17,8 +17,6 @@ public class odd_square {
                 }
                 System.out.println();
             }
-            // Second row loop
-            //for9int i=0; i
         } else {
             System.out.println("Out of bound!");
         }
