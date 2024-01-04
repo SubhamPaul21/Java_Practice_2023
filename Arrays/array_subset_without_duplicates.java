@@ -8,7 +8,6 @@ public class array_subset_without_duplicates {
         int[] arr1 = { 9, 3, 1, 5 };
         int[] arr2 = { 9, 7 };
         Set<Integer> arr1_Set = new HashSet<>();
-        Boolean isSubset = true;
 
         for (int element : arr1) {
             arr1_Set.add(element);

@@ -32,15 +32,11 @@ public class reverse_string {
         }
 
         System.out.println(reversedString);
-        // int i = 0;
-        // while (i < n1 && i != n1 % 2) {
-
-        // }
     }
 
     public static void main(String[] args) {
         String str1 = "abdul";
-        String str2 = "subham";
+        // String str2 = "subham";
         reversal(str1);
     }
 }

@@ -1,6 +1,5 @@
 import java.util.Map;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class max_distance_between_same_element {
     public static void main(String[] args) {

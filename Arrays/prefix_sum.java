@@ -1,12 +1,10 @@
 import java.io.*;
 import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Stream;
 
 public class prefix_sum {
     public static void main(String[] args) throws IOException {
         BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(inputReader.readLine());
+        // int n = Integer.parseInt(inputReader.readLine());
         // System.out.println(n);
 
         int[] input = Arrays.stream(inputReader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
