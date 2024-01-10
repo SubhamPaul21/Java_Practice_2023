@@ -2,7 +2,6 @@ public class dp_basic {
     public static void main(String[] args) {
         int n = 5;
         int[] arr = { 6, 7, 3, 2, 2 };
-        int q = 4;
         int[] queries = { 0, 3, 4, 2 };
 
         int[] dp = new int[n];
