@@ -5,11 +5,11 @@ public class upper_bound {
         int left = 0;
         int right = arr.length - 1;
 
-        while(left <= right) {
+        while (left <= right) {
             int mid = left + (right - left) / 2;
-            if(arr[mid] > target) {
+            if (arr[mid] > target) {
                 right = mid - 1;
-            } else if(arr[mid] < target) {
+            } else if (arr[mid] < target) {
                 left = mid + 1;
             } else {
                 // index = mid;
@@ -28,10 +28,12 @@ public class upper_bound {
         // Output --> Upper bound of 6 is at index 5
 
         int[] arr = {1, 3, 5, 6 , 6, 7, 7, 9};
+        // int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
         int target = 7;
         int upperBoundIndex = upperBound(arr, target);
-        if(upperBoundIndex != -1 && upperBoundIndex != arr.length) {
-            System.out.println("Upper bound of " + target + " is at index " + upperBoundIndex + " which is the element: " + arr[upperBoundIndex]);
+        if (upperBoundIndex != -1 && upperBoundIndex != arr.length) {
+            System.out.println("Upper bound of " + target + " is at index " + upperBoundIndex
+                    + " which is the element: " + arr[upperBoundIndex]);
         } else {
             System.out.println("Target number's upper bound doesn't exists in the array");
         }
