@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class min_operation_gfg {
 
     public static int minCount(long n) {

@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class min_operation_reduce_1_even_odd {
 
     public static int minCount(long n) {
