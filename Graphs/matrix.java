@@ -9,9 +9,10 @@ public class matrix {
 
         int n = graph[0];
         int m = graph[1];
+        int size = 1000;
 
         // create empty matrix
-        int[][] matrix = new int[n + 5][n + 5];
+        int[][] matrix = new int[size][size];
         Set<Integer> nodes = new HashSet<>();
         // Store edge directions in the matrix
         for (int i = 1; i <= m; i++) {
@@ -24,7 +25,7 @@ public class matrix {
 
         for (int i : nodes) {
             int count = 0;
-            for (int j = 0; j < n + 5; j++) {
+            for (int j = 0; j < size; j++) {
                 if (matrix[i][j] == 1) {
                     count = count + 1;
                 }

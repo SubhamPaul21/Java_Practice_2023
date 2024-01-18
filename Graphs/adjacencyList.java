@@ -12,7 +12,7 @@ public class adjacencyList {
         // create adjacency list
         ArrayList<ArrayList<Integer>> adjacencyList = new ArrayList<ArrayList<Integer>>();
 
-        for (int i = 0; i <= n + 5; i++) {
+        for (int i = 0; i <= 1000; i++) {
             adjacencyList.add(new ArrayList<>());
         }
 
