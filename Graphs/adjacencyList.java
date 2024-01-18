@@ -1,8 +1,5 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.io.*;
+import java.util.*;
 
 public class adjacencyList {
     public static void main(String[] args) throws IOException {
@@ -13,20 +10,23 @@ public class adjacencyList {
         int m = graph[1];
 
         // create adjacency list
-        ArrayList<ArrayList<Integer>> adjacencyList = new ArrayList<ArrayList<Integer>>(n);
+        ArrayList<ArrayList<Integer>> adjacencyList = new ArrayList<ArrayList<Integer>>();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n + 5; i++) {
             adjacencyList.add(new ArrayList<>());
         }
 
-        for (int i = 0; i < m; i++) {
+        Set<Integer> nodes = new HashSet<>();
+        for (int i = 1; i <= m; i++) {
             int[] edges = Arrays.stream(inputReader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             adjacencyList.get(edges[0]).add(edges[1]);
             adjacencyList.get(edges[1]).add(edges[0]);
+            nodes.add(edges[0]);
+            nodes.add(edges[1]);
         }
 
-        for (int i = 0; i < n; i++) {
-            System.out.println(i + " has " + adjacencyList.get(i).size());
+        for (int node : nodes) {
+            System.out.println(node + " has " + adjacencyList.get(node).size());
         }
 
         inputReader.close();

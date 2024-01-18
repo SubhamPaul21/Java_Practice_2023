@@ -1,7 +1,5 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.io.*;
+import java.util.*;
 
 public class matrix {
     public static void main(String[] args) throws IOException {
@@ -13,18 +11,20 @@ public class matrix {
         int m = graph[1];
 
         // create empty matrix
-        int[][] matrix = new int[n][n];
-
+        int[][] matrix = new int[n + 5][n + 5];
+        Set<Integer> nodes = new HashSet<>();
         // Store edge directions in the matrix
-        for (int i = 0; i < m; i++) {
+        for (int i = 1; i <= m; i++) {
             int[] edges = Arrays.stream(inputReader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             matrix[edges[0]][edges[1]] = 1;
             matrix[edges[1]][edges[0]] = 1;
+            nodes.add(edges[0]);
+            nodes.add(edges[1]);
         }
 
-        for (int i = 0; i < n; i++) {
+        for (int i : nodes) {
             int count = 0;
-            for (int j = 0; j <= m; j++) {
+            for (int j = 0; j < n + 5; j++) {
                 if (matrix[i][j] == 1) {
                     count = count + 1;
                 }
